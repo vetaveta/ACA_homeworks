@@ -1,15 +1,8 @@
+package com.violeta;
+
 import java.util.Arrays;
 
 public class SortUtils {
-    public static void main(String[] args) {
-        int[] array = new int[]{6, 9, 1, -4, 0, 10, 60, 4, 22, 5};
-        System.out.println(Arrays.toString(array));
-        insertionSort(array);
-        System.out.println(Arrays.toString(array));
-        quickSort(array, 0, array.length - 1);
-        System.out.println(Arrays.toString(array));
-
-    }
 
     public static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
@@ -32,7 +25,7 @@ public class SortUtils {
 
     }
 
-    public static int partition(int[] arr, int first, int last) {
+    private static int partition(int[] arr, int first, int last) {
         int rightIndex = last;
         int leftIndex = first;
         int pivot = arr[first];
@@ -52,7 +45,7 @@ public class SortUtils {
         return leftIndex;
     }
 
-    public static void swap(int[] arr, int left, int right) {
+    private static void swap(int[] arr, int left, int right) {
         int temp = arr[left];
         arr[left] = arr[right];
         arr[right] = temp;

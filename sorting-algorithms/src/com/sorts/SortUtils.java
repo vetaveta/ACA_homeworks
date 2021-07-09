@@ -1,8 +1,9 @@
-package com.violeta;
+package com.sorts;
 
-import java.util.Arrays;
 
-public class SortUtils {
+class SortUtils {
+    private SortUtils() {
+    }
 
     public static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
@@ -22,7 +23,6 @@ public class SortUtils {
             quickSort(arr, first, dividerIndex - 1);
             quickSort(arr, dividerIndex, last);
         }
-
     }
 
     private static int partition(int[] arr, int first, int last) {

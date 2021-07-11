@@ -10,8 +10,7 @@ public class Strings_Methods {
         b = b.substring(0, 1).toUpperCase() + b.substring(1);
         return a + " " + b;
     }
-
-    public static boolean isAnagram(String a, String b) {
+ public static boolean isAnagram(String a, String b) {
         char[] aChars = a.toLowerCase().toCharArray();
         char[] bChars = b.toLowerCase().toCharArray();
         Arrays.sort(aChars);
